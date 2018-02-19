@@ -1,0 +1,20 @@
+{
+  "name": "drumkit",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "webpack-boot start",
+    "build": "webpack-boot build"
+  },
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "file-loader": "^1.1.6",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "less": "^3.0.1",
+    "less-loader": "^4.0.5",
+    "webpack-boot": "^0.0.15"
+  }
+}
