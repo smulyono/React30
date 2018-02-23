@@ -1,0 +1,69 @@
+@radius : 250px;
+@clock_thick : 10px;
+@tick_thick  : 5px;
+@hour-tick : (@radius / 2) - @tick_thick - 5;
+@minutes-tick : (@radius / 2) - @tick_thick - 15;
+@degree_counter : 360;
+@base_degree : -90deg;
+
+.loop(@counter) when (@counter >= 0) {
+    .loop((@counter - 1));
+    .degree-@{counter} {
+        transform-origin: left;
+        transform: rotate(@base_degree + @counter);
+    }
+}
+
+body {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size : 12px;
+
+    background-color:black;
+    color : white;
+  }
+
+.center-page-container {
+    position:absolute;
+    top:0;left:0;
+    right:0;bottom:0;
+    display:flex;
+    justify-content:  center;
+    align-items: center;
+    min-width: @radius;
+    min-height: @radius;
+}
+
+.clock-container {
+    position:relative;
+    width :@radius;
+    height:@radius;
+    border:solid @clock_thick whitesmoke;
+    border-radius: 50%;
+
+    .clock-hour {
+        position:absolute;
+        left : @radius / 2;
+        top : (@radius / 2) - (@tick_thick / 2);
+        width : @hour-tick;
+        height: @tick_thick;
+        background-color : whitesmoke;
+        z-index : 0;
+    }
+    .clock-minutes {
+        position:absolute;
+        left: (@radius / 2);
+        width : @minutes-tick;
+        top : (@radius / 2);
+        height: @tick_thick / 2;
+        background-color : gray;
+        z-index : 2;
+    }
+
+    .loop(@degree_counter);
+}
