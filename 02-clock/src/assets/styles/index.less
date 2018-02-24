@@ -1,8 +1,8 @@
 @radius : 250px;
 @clock_thick : 10px;
 @tick_thick  : 5px;
-@hour-tick : (@radius / 2) - @tick_thick - 5;
-@minutes-tick : (@radius / 2) - @tick_thick - 15;
+@hour-tick : (@radius / 2) - @tick_thick - 25;
+@minutes-tick : (@radius / 2) - @tick_thick - 5;
 @degree_counter : 360;
 @base_degree : -90deg;
 
@@ -63,6 +63,16 @@ body {
         height: @tick_thick / 2;
         background-color : gray;
         z-index : 2;
+    }
+    .clock-second {
+        position:absolute;
+        left: (@radius / 2);
+        width : @minutes-tick;
+        top : (@radius / 2);
+        height: @tick_thick / 4;
+        background-color : lightgoldenrodyellow;
+        z-index : 3;
+        transition: all 0.5s;
     }
 
     .loop(@degree_counter);

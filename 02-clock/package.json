@@ -5,7 +5,9 @@
     "start": "webpack-boot start",
     "build": "webpack-boot build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1"
+  },
   "devDependencies": {
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
