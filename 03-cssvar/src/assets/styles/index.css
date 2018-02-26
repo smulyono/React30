@@ -1,0 +1,47 @@
+:root{
+    --spacing: 30px;
+    --blur : 0px;
+    --color : #9c2222;
+}
+
+body {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size : 12px;
+  background-color : black;
+  color : white;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+span.h1 {
+    color : var(--color);
+}
+
+.controls {
+    max-width: 400px;
+    text-align: center;
+}
+
+.controls label {font-size : 1.1rem;}
+.controls label:not(:first-child){
+    margin-left:20px;
+}
+
+img {
+    border-style: solid;
+    border-color: var(--color);
+    border-width: var(--spacing);
+    filter: blur(var(--blur));
+
+    margin-top : 20px;
+    width : 400px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>03-cssvar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <h1>CSS variable with <span class='h1'>Javascript</span></h1>
+
+    <div class="controls">
+        <label>Spacing</label>
+        <input type="range" name="spacing"
+            min="1" max="50"
+            step="2"
+            value="10"
+            data-metrics="px" />
+
+        <label>Blur</label>
+        <input type="range"
+            name="blur"
+            min="0" max="10" value="0"
+            step="0.5"
+            data-metrics="px" />
+
+        <label>Base Color</label>
+        <input type="color" value="#ffffff"
+            name="color"/>
+
+    </div>
+
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+
+  </body>
+</html>
