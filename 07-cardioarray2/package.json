@@ -1,0 +1,14 @@
+{
+  "name": "07-cardioarray2",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "webpack-boot start",
+    "build": "webpack-boot build"
+  },
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "devDependencies": {
+    "webpack-boot": "~0.0.16"
+  }
+}
